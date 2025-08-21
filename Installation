@@ -9,5 +9,15 @@ agent any
 				sh 'sudo apt install nginx -y'
 			}
 		}
+
+
+stage ('deploy-index')
+		{
+			steps {
+				sh 'sudo echo "Welcome to Young Minds." > index.html'
+				sh 'sudo mv index.html /var/www/html/index.html'
+
+			}
+		}
 }
 }
