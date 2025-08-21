@@ -21,7 +21,7 @@ agent any
 				sh 'sudo mv index.html /var/www/html/index.html'
 
 			}
-		}
+		}git 
 
 		stage ('Nginx-stop')
 		{
