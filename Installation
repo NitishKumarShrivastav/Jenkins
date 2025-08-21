@@ -19,5 +19,20 @@ stage ('deploy-index')
 
 			}
 		}
+
+
+		stage ('Nginx-stop')
+		{
+			steps {
+				sh 'sudo systemctl stop nginx'
+			}
+		}
+
+		stage ('Start-nginx')
+		{
+			steps {
+				sh 'sudo systemctl start nginx'
+			}
+		}
 }
 }
